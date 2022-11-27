@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+.persona {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  width: 300px;
+}
+.persona__info {
+  display: flex;
+  border-radius: 15px;
+  height: 70%;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: hsl(264deg, 64%, 52%);
+}
+.persona__foto {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  border: 4px solid hsl(236deg, 100%, 87%);
+}
+.persona__foto img {
+  width: 100%;
+}
+.persona__tiempo {
+  display: flex;
+  justify-content: space-around;
+  height: 30%;
+  align-items: center;
+}
+
+/*# sourceMappingURL=Persona.css.map */

@@ -1,0 +1,39 @@
+@use 'variables';
+.persona{
+    // border: 1px solid red;
+    background-color: variables.$darkBlue;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    width: 300px;
+    
+    &__info{
+        display: flex;
+        // border: 1px solid yellow;
+        border-radius: 15px;
+        height: 70%;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: variables.$Violet;
+        
+
+    }
+    &__foto{
+        width: 80px;
+        height: 80px;
+        border-radius: 50px ;
+        border: 4px solid variables.$paleBlue;
+        img{
+            width: 100%;
+            // box-shadow: 2px 2px 2px 1px white;
+        }
+    }
+    &__tiempo{
+        display: flex;
+        justify-content: space-around;
+        height: 30%;
+        align-items: center;
+    }
+
+}
