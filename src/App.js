@@ -1,11 +1,13 @@
 import './App.css';
 import Persona from './components/Persona';
-
+import { TaskContextProvider } from './context/TaskContext';
 function App() {
   return (
-    <div className="App">
+    <TaskContextProvider>
+      <div className="App">
       <Persona />
-    </div>
+      </div>
+    </TaskContextProvider>
   );
 }
 

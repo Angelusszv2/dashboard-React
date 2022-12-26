@@ -29,6 +29,18 @@
   justify-content: space-around;
   height: 30%;
   align-items: center;
+  color: hsl(235deg, 45%, 61%);
+}
+.persona__tiempo > div:hover {
+  cursor: pointer;
+}
+
+.marcado {
+  color: hsl(236deg, 100%, 87%);
+}
+
+.nomarcado {
+  color: hsl(235deg, 45%, 61%);
 }
 
 /*# sourceMappingURL=Persona.css.map */
