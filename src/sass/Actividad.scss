@@ -1,0 +1,93 @@
+@use 'variables';
+
+.actividad{
+    height: 180px;
+    width: 300px;
+    position: relative;
+    border-radius: 10px;
+
+    overflow: hidden;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    & img{
+        position: absolute;
+        right: 15px;
+    }
+    &__descripcion{
+        position: absolute;
+        background-color: variables.$darkBlue;
+        width: 100%;
+        height: 75%;
+        bottom: 0;
+        text-align: left;
+        border-radius: 10px;
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: stretch;
+        align-items: stretch;        
+    }
+    &__nombre, &__hora{
+        padding-left: 20px;
+    }
+    &__nombre{
+        padding-top: 40px;
+        font-size: medium;   
+    }
+    &__hora{
+        font-size: 30px;
+    }
+    &__puntos,&__horapast{
+        text-align: right;
+        padding-right: 20px;
+    }
+    &__puntos{
+        padding-top: 30px;
+        font-size: 30px;
+    }
+    &__horapast{
+        padding-top: 10px;
+        font-size: 12px;
+    }
+    @media (min-width:1200px) {
+
+        margin-left: 0;
+        margin-right: 0;
+        width: auto;
+        height: 200px;
+    
+        &__descripcion{
+
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            justify-items: stretch;
+            align-items: stretch;        
+        }
+        &__horapast{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            text-align: left;
+            padding-left: 20px;
+        }
+        &__puntos{
+            
+            padding-top: 0px;
+        }
+        &__nombre{
+            padding-top: 15px;
+        }
+        &__hora{
+            
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            text-align: 35px;
+
+        }
+    }
+}

@@ -13,4 +13,19 @@ body {
   color: hsl(236deg, 100%, 87%);
 }
 
+@media (min-width: 1200px) {
+  .App {
+    position: relative;
+    right: 200px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 0.3fr 0.3fr 0.3fr;
+    grid-template-rows: 2fr 2fr;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-column-gap: 10px;
+    grid-row-gap: 1px;
+  }
+}
+
 /*# sourceMappingURL=App.css.map */

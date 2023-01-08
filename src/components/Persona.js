@@ -1,28 +1,28 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState} from 'react';
 import Personaje from "../images/image-jeremy.png"
 import "../styles/Persona.css"
-function Persona() {
+function Persona(props) {
   const [daily,setDaily] = useState(false);
   const [weekly,setWeekly] = useState(false);
   const [monthly,setMonthly] = useState(false);
   let cambio = (e)=>{
-    if (e.target.textContent == "Daily"){
+    if (e.target.textContent === "Daily"){
       setDaily(true);
       setWeekly(false);
       setMonthly(false);
     }
-    if (e.target.textContent == "Weekly"){
+    if (e.target.textContent === "Weekly"){
       setDaily(false);
       setWeekly(true);
       setMonthly(false);
     }
-    if (e.target.textContent == "Monthly"){
+    if (e.target.textContent === "Monthly"){
       setDaily(false);
       setWeekly(false);
       setMonthly(true);
     }
-
+    props.cambio(e.target.textContent.toLowerCase())
   }  
     return(
         <div className="persona" >
@@ -32,7 +32,7 @@ function Persona() {
             </div>
             <div className='persona-infodetalle'>
               <p>Report for</p>
-              <p>Jeremy Robson</p>
+              <p><span>{props.name}</span> <span>{props.lastname}</span></p>
             </div>
           </div>
           <div className="persona__tiempo">

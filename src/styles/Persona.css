@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 .persona {
+  margin-left: auto;
+  margin-right: auto;
   background-color: hsl(235deg, 46%, 20%);
   border-radius: 15px;
   display: flex;
@@ -24,6 +26,9 @@
 .persona__foto img {
   width: 100%;
 }
+.persona-infodetalle p:first-child {
+  font-size: 12px;
+}
 .persona__tiempo {
   display: flex;
   justify-content: space-around;
@@ -33,6 +38,41 @@
 }
 .persona__tiempo > div:hover {
   cursor: pointer;
+}
+@media (min-width: 1200px) {
+  .persona {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin-top: 20px;
+    height: 97%;
+    margin-right: 0;
+    flex-direction: column;
+  }
+  .persona__info {
+    display: block;
+    padding-top: 20px;
+    padding-left: 40px;
+  }
+  .persona__foto {
+    display: block;
+    margin-bottom: 40px;
+  }
+  .persona-infodetalle p:nth-child(2) {
+    font-size: 30px;
+  }
+  .persona-infodetalle p:nth-child(2) span {
+    display: block;
+    margin-top: 9px;
+    font-weight: 300;
+  }
+  .persona__tiempo {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-left: 30px;
+  }
 }
 
 .marcado {

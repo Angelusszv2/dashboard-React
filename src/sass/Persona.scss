@@ -1,6 +1,8 @@
 @use 'variables';
 .persona{
     // border: 1px solid red;
+    margin-left: auto;
+    margin-right: auto;
     background-color: variables.$darkBlue;
     border-radius: 15px;
     display: flex;
@@ -10,6 +12,7 @@
     
     &__info{
         display: flex;
+        
         // border: 1px solid yellow;
         border-radius: 15px;
         height: 70%;
@@ -29,6 +32,9 @@
             // box-shadow: 2px 2px 2px 1px white;
         }
     }
+    &-infodetalle p:first-child{
+        font-size: 12px;
+    }
     &__tiempo{
         display: flex;
         justify-content: space-around;
@@ -38,6 +44,43 @@
     }
     &__tiempo > div:hover{
         cursor: pointer;
+    }
+
+    @media (min-width:1200px) {
+        
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin-top: 20px;
+        height: 97%;
+        
+        margin-right: 0;
+        flex-direction: column;
+        &__info{
+            display: block;
+            padding-top: 20px;
+            padding-left: 40px;
+        }
+        &__foto{
+            display: block;
+            margin-bottom: 40px;
+        }
+        &-infodetalle p:nth-child(2){
+            font-size: 30px;
+            & span{
+                display: block;
+                margin-top: 9px;
+                font-weight: 300;
+            }
+        }
+        &__tiempo{
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            margin-left: 30px;
+        }
+
     }
 
 }
