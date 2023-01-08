@@ -4,7 +4,6 @@
   width: 300px;
   position: relative;
   border-radius: 10px;
-  overflow: hidden;
   margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
@@ -18,7 +17,7 @@
   background-color: hsl(235deg, 46%, 20%);
   width: 100%;
   height: 75%;
-  bottom: 0;
+  bottom: -5px;
   text-align: left;
   border-radius: 10px;
   display: grid;
